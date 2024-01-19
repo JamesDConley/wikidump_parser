@@ -1,0 +1,12 @@
+# EDA/Tabular Data Tools
+jupyterlab==3.0.12
+numpy==1.19.5
+tqdm==4.62.0
+xgboost==1.4.2
+seaborn==0.11.2
+pandas
+
+# Useful Tensorflow stuff
+tensorflow-text==2.6.0
+tf-models-official==2.6.0
+focal-loss==0.0.6
