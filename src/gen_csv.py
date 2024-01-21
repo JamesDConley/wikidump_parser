@@ -1,8 +1,9 @@
+import argparse
 import xml.etree.ElementTree as ET
 from tqdm import tqdm
 import csv
 
-def process_xml(xml_path=, outpath="wikipedia_dump.csv")
+def process_xml(xml_path, outpath):
     # Open the XML file using the iterparse method
     context = ET.iterparse(xml_path, events=('start', 'end'))
 
@@ -10,7 +11,7 @@ def process_xml(xml_path=, outpath="wikipedia_dump.csv")
     _, root = next(context)
 
    
-    with open('wikipedia_dump.csv', 'w', encoding='utf-8', newline='') as csv_file:
+    with open(outpath, 'w', encoding='utf-8', newline='') as csv_file:
         # Write the csv header
         writer = csv.writer(csv_file)
         writer.writerow(['Article Name', 'Article Text', 'Metadata'])

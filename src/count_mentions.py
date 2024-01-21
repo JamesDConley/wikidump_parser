@@ -6,7 +6,6 @@ from tqdm import tqdm
 import pandas as pd
 from pandarallel import pandarallel
 sys.path.append("../src")
-from core_ai_methods import query_model, get_current_date_time, rate_rag_result, get_rag_items, query_system
 
 import wikitextparser as wtp
 
@@ -24,7 +23,7 @@ def extract_article_names(wikitext):
     
     return article_names
 
-def count_mentions(input_csv, output_csv, ignore_dupes=False, chunk_size=50000):
+def count_mentions(input_csv, output_csv, ignore_dupes=False, chunk_size=500000):
     chunk_iter = pd.read_csv(input_csv, chunksize=chunk_size, usecols=["Article Name", "Article Text"])
     first_chunk = True
     assert not os.path.exists(output_csv)

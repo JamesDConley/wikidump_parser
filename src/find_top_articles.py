@@ -6,7 +6,6 @@ from copy import deepcopy
 import pandas as pd
 from tqdm import tqdm
 
-from find_mentions import count_mentions
 from pandarallel import pandarallel
 
 
